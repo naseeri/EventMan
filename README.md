@@ -2,7 +2,8 @@
 
 A simple Event Manager showing the use of NodeJS, Angular, Bootstrap, Angular Material and ExpressJs
 
-![screen shot](screenshot.PNG?raw=true "Event Manager")
+![screen shot](eventman_scrnshot1.PNG?raw=true "Event Manager")
+![screen shot](eventman_scrnshot2.PNG?raw=true "Event Manager")
 
 Instructions:
   -Click on a day of the month to Add an Event.
