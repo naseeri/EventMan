@@ -1,0 +1,24 @@
+{
+	"name": "EventMan",
+	"version": "1.0.0",
+	"description": "A simple Event Manager showing the use of NodeJS, Angular, Bootstrap, Angular Material and ExpressJs",
+	"author": "Ata-ur-Rasool Haq <atanaseeri@yahoo.com>",
+	"homepage": "https://github.com/naseeri/eventman",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"keywords": [
+		"Full Calender",
+		"Event Manager",
+		"AngularJS"
+	],
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.x",
+		"open": "^x"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/naseeri/eventman.git"
+	}
+}

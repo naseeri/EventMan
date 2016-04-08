@@ -1,0 +1,29 @@
+<html>
+<head>
+<script src='lib/jquery.min.js'></script>
+</head>
+<body>
+	<span><h1>Events</h1></span>
+	<div id='events'></div>
+	
+	<button id="loader">Load</button>
+	
+	<script>
+		
+	
+		$("#loader").click(function(){
+			
+			$.ajax({
+			url:"/events",
+			success: function(data){
+				 $.each(data, function(index, element) {
+					$('#events').append($('<div>', {
+						text:  element.id + " - " + element.title + " - " + element.start
+					}));
+				});
+			}
+		});
+		});
+	</script>
+</body>
+</html>

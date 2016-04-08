@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="eventman">
+<head>
+<meta charset='utf-8' />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href='lib/fullcalendar.css' rel='stylesheet' />
+<link href='lib/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+<link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc2/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.0-rc2/docs.css'>
+<script src='lib/moment.min.js'></script>
+<script src='lib/jquery.min.js'></script>
+<script src='lib/fullcalendar.min.js'></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src='angular/angular.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc2/angular-material.js'></script>
+<script src='angular/app.js'></script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+
+</head>
+<body ng-controller="event">
+	<span style="text-align:center;"><h1>{{appTitle}}</h1></span>
+	<div id='calendar'></div>
+
+	<div class="modal fade" id="delModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Delete Event</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+					  <label>Are you sure you would like to delete {{delName}}?</label>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="delEvent()">Yes</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/ng-template" id="tabDialog.tmpl.html">
+		<md-dialog>
+			<form>
+				<md-toolbar>
+					<div class="md-toolbar-tools">
+					<h2>Add an Event</h2>
+					<span flex></span>
+					<md-button class="md-icon-button" ng-click="cancel()">
+						<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+					</md-button>
+					</div>
+				</md-toolbar>
+				<md-dialog-content style="max-width:800px;max-height:810px; ">
+					<md-content layout-gt-sm="row" layout-padding="">
+						<div>
+						<md-input-container>
+							<label>Enter Event Title</label>
+							<input ng-model="addName">
+						</md-input-container>
+						</div>
+					</md-content>
+				</md-dialog-content>
+
+				<md-dialog-actions layout="row">
+					<md-button ng-click="answer(addName)" style="margin-right:20px;" autofocus>
+						Add
+					</md-button>
+				</md-dialog-actions>
+			</form>
+		</md-dialog>
+	</script>
+	
+
+</body>
+</html>
