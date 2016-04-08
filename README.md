@@ -6,6 +6,7 @@ A simple Event Manager showing the use of NodeJS, Angular, Bootstrap, Angular Ma
 ![screen shot](eventman_scrnshot2.PNG?raw=true "Event Manager")
 
 Instructions:
+  
   -Click on a day of the month to Add an Event.
   
   -Click on an event do delete it.
