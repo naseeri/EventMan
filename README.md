@@ -1,6 +1,6 @@
 # EventMan
 
-A simple Event Manager showing the use of NodeJS, Angular, Bootstrap, Angular Material and ExpressJs
+A simple Event Manager showing the use of NodeJS, Angular, Bootstrap, Angular Material and ExpressJs. Created during the HTML5 BOOTCAMP with Rudi Grobler at BBD.
 
 ![screen shot](eventman_scrnshot1.PNG?raw=true "Event Manager")
 ![screen shot](eventman_scrnshot2.PNG?raw=true "Event Manager")
