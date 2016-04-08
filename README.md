@@ -7,6 +7,8 @@ A simple Event Manager showing the use of NodeJS, Angular, Bootstrap, Angular Ma
 
 Instructions:
   
+  -To start the app... make sure NodeJS is installed and then run the 'start.bat'
+ 
   -Click on a day of the month to Add an Event.
   
   -Click on an event do delete it.
